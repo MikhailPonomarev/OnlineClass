@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS users
+(
+    id SERIAL PRIMARY KEY,
+    last_name CHARACTER VARYING(30),
+    first_name CHARACTER VARYING(30),
+    middle_name CHARACTER VARYING(30),
+    email CHARACTER VARYING(30)
+);
