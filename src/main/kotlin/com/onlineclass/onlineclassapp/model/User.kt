@@ -29,8 +29,6 @@ data class User(
     val email: String = "",
 
     @JsonProperty("role_id")
-    @ManyToOne
     @JoinColumn(name = "role_id")
-    @Column(name = "role_id")
     var roleId: Int? = null
 )

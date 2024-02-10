@@ -1,8 +1,16 @@
-CREATE TABLE IF NOT EXISTS users
+CREATE TABLE IF NOT EXISTS roles
 (
     id SERIAL PRIMARY KEY,
+    description CHARACTER VARYING(30)
+);
+
+CREATE TABLE IF NOT EXISTS users
+(
+    id BIGSERIAL PRIMARY KEY,
     last_name CHARACTER VARYING(30),
     first_name CHARACTER VARYING(30),
     middle_name CHARACTER VARYING(30),
-    email CHARACTER VARYING(30)
+    email CHARACTER VARYING(30),
+    role_id INT,
+    FOREIGN KEY (role_id) REFERENCES roles(id)
 );

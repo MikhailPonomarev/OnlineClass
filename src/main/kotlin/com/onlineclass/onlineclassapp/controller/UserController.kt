@@ -23,8 +23,11 @@ class UserController(private val userService: UserService) {
     @ResponseStatus(HttpStatus.FOUND)
     fun getUserById(@PathVariable id: Long): User = userService.getById(id)
 
-    @PostMapping
-    fun createUser(@RequestBody user: User): User = userService.createUser(user)
+    @PostMapping("register/curator")
+    fun registerCuratorUser(@RequestBody user: User): User = userService.createCuratorUser(user)
+
+    @PostMapping("register/student")
+    fun registerStudentUser(@RequestBody user: User): User = userService.createStudentUser(user)
 
     @PutMapping("{id}")
     fun updateUser(@PathVariable id: Long, @RequestBody user: User): User {
