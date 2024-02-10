@@ -9,7 +9,8 @@ data class User(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JsonProperty("id")
-    @Column(name = "id") var id: Long? = null,
+    @Column(name = "id")
+    var id: Long? = null,
 
     @JsonProperty("last_name")
     @Column(name = "last_name")
@@ -25,5 +26,11 @@ data class User(
 
     @JsonProperty("email")
     @Column(name = "email")
-    val email: String = ""
+    val email: String = "",
+
+    @JsonProperty("role_id")
+    @ManyToOne
+    @JoinColumn(name = "role_id")
+    @Column(name = "role_id")
+    var roleId: Int? = null
 )
