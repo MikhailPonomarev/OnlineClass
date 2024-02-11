@@ -32,7 +32,7 @@ class UserController(private val userService: UserService) {
     @PutMapping("{id}")
     fun updateUser(@PathVariable id: Long, @RequestBody user: User): User {
         user.id = id
-        return userService.updateUser(id, user)
+        return userService.updateUser(user)
     }
 
     @DeleteMapping("{id}")

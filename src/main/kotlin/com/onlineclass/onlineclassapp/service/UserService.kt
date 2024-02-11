@@ -21,7 +21,7 @@ class UserService(private val userRepository: UserRepository, private val roleSe
         return userRepository.save(user)
     }
 
-    fun updateUser(id: Long, user: User): User = userRepository.save(user)
+    fun updateUser(user: User): User = userRepository.save(user)
 
     fun deleteUserById(id: Long) = userRepository.deleteById(id)
 }

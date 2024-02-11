@@ -12,15 +12,15 @@ data class User(
     @Column(name = "id")
     var id: Long? = null,
 
-    @JsonProperty("last_name")
+    @JsonProperty("lastName")
     @Column(name = "last_name")
     val lastName: String = "",
 
-    @JsonProperty("first_name")
+    @JsonProperty("firstName")
     @Column(name = "first_name")
     val firstName: String = "",
 
-    @JsonProperty("middle_name")
+    @JsonProperty("middleName")
     @Column(name = "middle_name")
     val middleName: String? = null,
 
@@ -28,7 +28,7 @@ data class User(
     @Column(name = "email")
     val email: String = "",
 
-    @JsonProperty("role_id")
+    @JsonProperty("roleId")
     @JoinColumn(name = "role_id")
     var roleId: Int? = null
 )
