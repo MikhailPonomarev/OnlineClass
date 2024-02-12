@@ -3,7 +3,7 @@ package com.onlineclass.onlineclassapp.model
 import jakarta.persistence.*
 
 @Entity
-@Table(name = "user_to_class")
+@Table(name = "users_to_classes")
 data class UserToClass(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

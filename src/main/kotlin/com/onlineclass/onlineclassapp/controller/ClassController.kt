@@ -19,7 +19,7 @@ class ClassController(
     private val userToClassService: UserToClassService
 ) {
     @GetMapping("{id}")
-    fun getClassesByUserId(@PathVariable id: Long) = userToClassService.getActiveClassesByUserId(id)
+    fun getClassesByUserId(@PathVariable id: Long) = classService.getActiveClassesByUserId(id)
 
     @PostMapping("create")
     fun createClass(@RequestBody clazz: Class): Class {
